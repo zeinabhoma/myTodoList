@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todo list</title>
+    <link rel="icon" href="./images/icon1.png">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./bootstrap-5.3.1-dist/css/bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body class="body">
+    <div class="container">
+        <div class="row">
+            <h2 class="title p-3 p-md-5">
+                <i class='bx bxs-check-circle'></i>
+                Todo App
+            </h2>
+            <div class="input-group d-sm-flex">
+                <input class="form-control" id="input" type="text" placeholder="What do you need to do?">
+                <button type="button" class="btn btn-dark" id="add">+ Add</button>
+            </div>
+            <div class="important">
+                <h4>Important</h4>
+                <div class="todo">
+                    <p class="todo-p">add any important todo</p>
+                </div>
+                <!-- <div class="todo">
+                    <p class="todo-p">example</p>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bxs-check-circle'></i>
+                        <i class='bx bxs-trash-alt'></i>
+                    </div>
+                </div>
+                <div class="todo">
+                    <p class="todo-p">example</p>
+                    <div>
+                        <i class='bx bxs-star'></i>
+                        <i class='bx bx-check-circle' ></i>
+                        <i class='bx bxs-trash-alt'></i>
+                    </div>
+                </div> -->
+            </div>
+            <div class="tasks">
+                <h4>Tasks</h4>  
+                <div class="todo">
+                    <p class="todo-p">add any todo</p>
+                </div>  
+                <!-- <div class="todo">
+                    <div>
+                        <i class='bx bxs-check-circle'></i>
+                        <p class="todo-p">example</p>
+                    </div>
+                    <div>
+                        <i class='bx bx-star' ></i>
+                        <i class='bx bxs-trash-alt'></i>
+                    </div>
+                </div>
+                <div class="todo">
+                    <div>
+                        <i class='bx bx-check-circle' ></i>
+                        <p class="todo-p">example</p>
+                    </div>
+                    <div>
+                        <i class='bx bx-star' ></i>
+                        <i class='bx bxs-trash-alt'></i>
+                    </div>
+                </div> -->
+                <!-- <div class="todo check-todo">
+                    <div>
+                        <i class='bx bx-star' ></i>
+                        <p class="todo-p">example</p>
+                    </div>
+                    <div>
+                        <i class='bx bx-check-circle' ></i>
+                        <i class='bx bxs-trash-alt'></i>
+                    </div>
+                </div> -->
+            </div>
+            <div class="mobile-input d-sm-none">
+                <i class='bx bxs-plus-circle' id="plus-icon"></i>
+                <div class="input-group" id="mobile-input-show">
+                    <input class="form-control" id="input-mobile-mode" type="text" placeholder="What do you need to do?">
+                    <button type="button" class="btn btn-dark" id="add-mobile-mode">+ Add</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="./js/script.js"></script>
+    <script src="./bootstrap-5.3.1-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
