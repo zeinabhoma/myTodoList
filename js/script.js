@@ -1,12 +1,11 @@
 let $ = document;
+const inputGroup = $.querySelector(".group")
 const userInput = $.getElementById("input");
 const addBtn = $.getElementById("add");
 const tasks = $.querySelector(".tasks");
 const important = $.querySelector(".important");
 const plusBtn = $.getElementById("plus-icon");
-const mobileInputShow = $.getElementById("mobile-input-show");
-const mobileInput = $.getElementById("input-mobile-mode");
-const mobileAddBtn = $.getElementById("add-mobile-mode");
+const wrong = $.querySelector(".wrong");
 
 userInput.focus();
 
@@ -17,8 +16,9 @@ function enterHandler(event){
 }
 
 function addTodo(event){
-    tasks.children[1].style.display = "none";
-    tasks.insertAdjacentHTML("beforeend",`<div class="todo">
+    if(userInput.value){
+        tasks.children[1].style.display = "none";
+        tasks.insertAdjacentHTML("beforeend",`<div class="todo">
                     <div>
                         <i class='bx bx-star' ></i>
                         <p class="todo-p">${userInput.value}</p>
@@ -29,34 +29,23 @@ function addTodo(event){
                     </div>
                 </div>`)
     userInput.value = "";  
+    plusBtn.style.display = "block"
+    inputGroup.classList.add("d-none")
+    inputGroup.classList.remove("mobile-input");
+    wrong.style.display = "none";
+    }
+    else{
+        wrong.style.display = "block";
+    }
     hasTodoInImportant();
     hasTodoInTasks();  
 }
 
 function plusHandler(event){
     plusBtn.style.display = "none";
-    mobileInputShow.style.display = "flex";
-    // addTodo(event);
-    mobileAddBtn.addEventListener("click",event=>{
-        tasks.children[1].style.display = "none";
-        tasks.insertAdjacentHTML("beforeend",`<div class="todo">
-                        <div>
-                            <i class='bx bx-star' ></i>
-                            <p class="todo-p">${mobileInput.value}</p>
-                        </div>
-                        <div>
-                            <i class='bx bx-check-circle' ></i>
-                            <i class='bx bxs-trash-alt'></i>
-                        </div>
-                    </div>`)
-        mobileInput.value = ""; 
-
-        hasTodoInImportant();
-        hasTodoInTasks();  
-    });
-    // changTodoStatus(event);
-    // plusBtn.style.display = "block";
-    // mobileInputShow.style.display = "none"; 
+    inputGroup.classList.remove("d-none");
+    inputGroup.classList.add("mobile-input");
+    
 }
 
 function changTodoStatus(event){

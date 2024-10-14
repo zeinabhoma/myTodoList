@@ -23,6 +23,7 @@
     /* padding: 3rem ; */
     text-align: center;
 }
+
 .input-group, .important, .tasks{
 margin:2rem 0;
 }
@@ -34,6 +35,12 @@ margin:2rem 0;
     color: black !important;
     background-color: #e9ecef !important;
     opacity: 0.6;
+}
+
+.wrong{
+    margin-left: 2rem;
+    display: none;
+    margin-top: -2rem !important;
 }
 
 h4{
@@ -49,10 +56,10 @@ h4{
     align-items: center;
     border-radius: 0.8rem;
     gap: 40%;
-    animation-name: hi;
+    animation-name: show-todo;
     animation-duration: 1s;
 }
-@keyframes hi{
+@keyframes show-todo{
     from{opacity: 0;}
     to{opacity: 0.6;}
 }
@@ -84,20 +91,25 @@ h4{
     color: blue;
     text-decoration: line-through !important;
 }
+
+.mobile-input div input{
+    font-size: 0.9rem;
+}
 .mobile-input{
+    position: fixed !important;
+    z-index: 100;
+    text-align: center;
+    bottom: 0;
+    font-size: 0.9rem;
+}
+
+#plus-icon{
     position: fixed;
     z-index: 100;
     text-align: center;
     bottom: 0;
-    /* background-color: pink; */
-}
-.mobile-input i{
     font-size: 4rem;
+
 }
-.mobile-input div{
-    display: none;
-}
-.mobile-input div input{
-    font-size: 0.9rem;
-}
+
 

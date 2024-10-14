@@ -16,9 +16,16 @@
                 <i class='bx bxs-check-circle'></i>
                 Todo App
             </h2>
-            <div class="input-group d-sm-flex">
+            <!-- <div class="input-group d-none d-sm-flex">
                 <input class="form-control" id="input" type="text" placeholder="What do you need to do?">
                 <button type="button" class="btn btn-dark" id="add">+ Add</button>
+            </div> -->
+            <div class="group d-none d-sm-block">
+                <div class="input-group d-sm-flex">
+                    <input class="form-control" id="input" type="text" placeholder="What do you need to do?">
+                    <button type="button" class="btn btn-dark" id="add">+ Add</button>
+                </div>
+                <p class="wrong text-danger">Please enter todo!</p>
             </div>
             <div class="important">
                 <h4>Important</h4>
@@ -78,13 +85,8 @@
                     </div>
                 </div> -->
             </div>
-            <div class="mobile-input d-sm-none">
-                <i class='bx bxs-plus-circle' id="plus-icon"></i>
-                <div class="input-group" id="mobile-input-show">
-                    <input class="form-control" id="input-mobile-mode" type="text" placeholder="What do you need to do?">
-                    <button type="button" class="btn btn-dark" id="add-mobile-mode">+ Add</button>
-                </div>
-            </div>
+            <i class='bx bxs-plus-circle d-sm-none' id="plus-icon"></i>
+            
         </div>
     </div>
 
