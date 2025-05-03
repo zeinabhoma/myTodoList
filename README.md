@@ -18,7 +18,9 @@ This project allows users to add and remove tasks easily in a clean and user-fri
 
 ### 📝 Todo List Overview
 ![Todo List](https://github.com/user-attachments/assets/5b5ecdd3-19df-4938-850d-17a68a89e2df)
+
 ![Todo List](https://github.com/user-attachments/assets/3265fe02-d82a-4ed7-86e9-f6cb4f532630)
+
 ![Todo List](https://github.com/user-attachments/assets/f52ef66b-7932-4a2c-88f1-9a93b55ce901)
 
 
